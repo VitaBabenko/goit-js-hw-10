@@ -1,6 +1,7 @@
 import './css/styles.css';
 import debounce from 'lodash.debounce';
-import {fetchCountries} from './fetchCountries';
+import { fetchCountries } from './fetchCountries';
+import Notiflix from 'notiflix';
 
 const DEBOUNCE_DELAY = 300;
 
@@ -12,12 +13,30 @@ input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(evt) {
     const dataInput = evt.target.value.trim();
-    fetchCountries(dataInput)
+    if (dataInput === '') {
+        return
+    } else {
+        fetchCountries(dataInput)
         .then(data => createMarkup(data))
         .catch(err => console.log(err))
+
+    }
+    
 }
 
 function createMarkup(obj) {
-    console.log(obj)
+    const markup = obj.map(({
+        flags: {
+            svg
+        },
+        name: {
+            official
+        },
+        capital,
+        languages: {
+            ukr
+        },
+        population
+    }) => ``)
 
 }
