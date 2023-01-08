@@ -75,3 +75,7 @@ function createMarkupInfo(obj) {
     info.innerHTML = markupInfo.join('');
     list.innerHTML = [];
 }
+
+
+export { list };
+export { info };
