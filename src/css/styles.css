@@ -18,3 +18,36 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.list-title {
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.country-info {
+  list-style: none;
+}
+
+.info-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.info-title {
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.info-span {
+  font-weight: 700;
+}
